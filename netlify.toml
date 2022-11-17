@@ -3,4 +3,17 @@
   publish = ".next"
 
 [[plugins]]
+  package = "@netlify/plugin-nextjs"
+[[plugins]]
   package = "netlify-plugin-cypress"
+  [plugins.inputs.postBuild]
+    enable = true
+
+  [plugins.inputs]
+    enable = false
+    
+  [[redirects]]
+  from = "/"
+  to = "https://whosviewed.me"
+  status = 301
+  force = true
